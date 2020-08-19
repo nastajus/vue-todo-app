@@ -11,7 +11,8 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld   //this is "registering" Hell in "comp"
+                 //allowing <HelloWorld...> to work in temp
   }
 }
 </script>
