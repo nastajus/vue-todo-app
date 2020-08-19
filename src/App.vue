@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- parent to child communication / binding --> 
-    <TodoThing :title="title2" />  <!-- fromerly:  title="Ian's Sweet List" -->
+    <TodoThing :title="title2" /> 
   </div>
 </template>
 
@@ -12,7 +12,6 @@ export default {
   name: 'App',
   components: {
     TodoThing   //this is "registering" Hell in "comp"
-                 //allowing <TodoThing...> to work in temp
   },
   //DATA IS A FUNCITON!!! NOT AN OBJECT!! 
   data  () { 
