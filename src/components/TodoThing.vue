@@ -1,6 +1,6 @@
 <template>
   <div class="todo-thing"> <!--formerly 'hello'-->
-    <h1>{{ title }}</h1>
+    <h1>{{ title2 }}</h1> <!--formerly 'title2'-->
     <p>
     </p>
   </div>
