@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <TodoThing title="Ian's Sweet List"/>
+    <!-- parent to child communication / binding --> 
+    <TodoThing :title="title2" />  <!-- fromerly:  title="Ian's Sweet List" -->
   </div>
 </template>
 

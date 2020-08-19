@@ -1,6 +1,6 @@
 <template>
   <div class="todo-thing"> <!--formerly 'hello'-->
-    <h1>{{ title2 }}</h1> <!--formerly 'title2'-->
+    <h1>{{ title }}</h1> 
     <p>
     </p>
   </div>
@@ -9,6 +9,7 @@
 <script>
 export default {
   name: 'TodoThing',
+  //what this component expects to receive from PARENT COMPONENTS... 
   props: {
     title: String
   }
