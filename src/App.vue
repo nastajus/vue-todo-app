@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TodoThing title="Ian's Sweet List"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoThing from './components/TodoThing.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld   //this is "registering" Hell in "comp"
-                 //allowing <HelloWorld...> to work in temp
+    TodoThing   //this is "registering" Hell in "comp"
+                 //allowing <TodoThing...> to work in temp
   }
 }
 </script>

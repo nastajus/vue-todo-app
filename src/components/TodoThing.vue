@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <h1></h1>
+  <div class="todo-thing"> <!--formerly 'hello'-->
+    <h1>{{ title }}</h1>
     <p>
     </p>
   </div>
@@ -8,9 +8,9 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'TodoThing',
   props: {
-    
+    title: String
   }
 }
 </script>
