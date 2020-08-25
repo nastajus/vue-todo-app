@@ -13,7 +13,7 @@ export default {
   components: {
     TodoThing   //this is "registering" Hell in "comp"
   },
-  //DATA IS A FUNCITON!!! NOT AN OBJECT!! 
+  //DATA IS A FUNCTION!!! NOT AN OBJECT!! 
   data  () { 
     return { 
       title2: "Ian's SECOND Sweet List"

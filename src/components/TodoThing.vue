@@ -6,6 +6,7 @@
         <li v-for="(item, index) in items" :key="index">{{ item }}</li>
       </ul>
     </p>
+n
     <input v-model="newItem" />
 
     <button @click="addItem()" :disabled="!newItem" > Add Item </button>
