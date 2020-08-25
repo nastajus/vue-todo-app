@@ -4,9 +4,10 @@
     <p>
       <ul>
         <TodoItemThing 
-          v-for="item in items"
+          v-for="(item, index) in items"
           :key="item.id"
-          :text="item.text"
+          :text="`id:${item.id} index:${index} - ${item.text}`"
+          @remove="removeItem(item.id)"
           />
       </ul>
     </p>
@@ -59,6 +60,19 @@ export default {
         text: this.newText
       })
       this.newText = "" 
+    },
+
+    removeItem (id) {
+      console.log(id)
+
+      //one way.. first only...
+      // const index = this.items.findIndex(item => item.id === id)
+      // if (index === -1) { return }
+      // this.items.splice(index, 1)
+
+      //since js moving to more functional world
+      // filter ~= more aggresive ;) 
+      this.items = this.items.filter(item => item.id !== id)
     },
 
     deleteLast () {

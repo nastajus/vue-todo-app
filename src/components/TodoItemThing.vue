@@ -1,5 +1,13 @@
 <template>
-  <li>{{ text }}</li>
+  <li>
+    {{ text }} 
+    <button @click="deleteMe">X</button>
+  </li>
+
+  <!-- <button @click=deleteMe></button> -->
+  <!-- ERROR: The template root requires exactly one element.eslint-plugin-vue  -->
+
+  <!-- v-bind = : , v-on = @  -->
 </template>
 
 <script>
@@ -24,7 +32,14 @@ export default {
 
   computed: {
   }, 
-  methods: {},
+  methods: {
+      deleteMe() {
+          ///HERE>
+          
+          //string what we want the event to be named, followed by parameters typically.
+        this.$emit('remove')
+      }
+  },
 
 }
 </script>
