@@ -10,6 +10,7 @@ export default {
   components: {},
 
   props: {
+    //if had "createdDate" and "accounts" and etc attributes passed down, then it can deserve to pass in the full object.
     text: {
       type: String,
       required: true
