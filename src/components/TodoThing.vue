@@ -8,7 +8,6 @@
           :key="item.id"
           :text="item.text"
           />
-        <!-- <li v-for="(item, index) in items" :key="index">{{ item }}</li> -->
       </ul>
     </p>
 
