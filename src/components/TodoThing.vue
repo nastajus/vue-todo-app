@@ -6,7 +6,7 @@
         <TodoItemThing 
           v-for="item in items"
           :key="item.id"
-          text='whatever'
+          :text="item.text"
           />
         <!-- <li v-for="(item, index) in items" :key="index">{{ item }}</li> -->
       </ul>
@@ -38,12 +38,12 @@ export default {
     return {
       idIndex: 4,
       items: [
-        { id: 0, text: "learn vue.js basics" },
-        { id: 1, text: "show alden old-school video game" },
-        { id: 2, text: "????????" },
-        { id: 3, text: "PROFIT!!!" },
+        { id: 0, text: 'learn vue.js basics' },
+        { id: 1, text: 'show alden old-school video game' },
+        { id: 2, text: '????????' },
+        { id: 3, text: 'PROFIT!!!' },
       ],
-      newText: "",
+      newText: '',
     }
   },
 
