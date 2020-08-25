@@ -1,6 +1,5 @@
 <template>
-  <div>
-  </div>
+  <li>{{ text }}</li>
 </template>
 
 <script>
@@ -10,7 +9,13 @@ export default {
 
   components: {},
 
-  props: {},
+  props: {
+    text: {
+      type: String,
+      required: true
+      //usually put either `required` or `default=str123`
+    }
+  },
 
   data () {
     return {
@@ -18,7 +23,6 @@ export default {
   },
 
   computed: {
-
   }, 
   methods: {},
 

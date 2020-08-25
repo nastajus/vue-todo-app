@@ -3,21 +3,32 @@
     <h1>{{ title }}</h1> 
     <p>
       <ul>
-        <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+        <TodoItemThing 
+          v-for="item in items"
+          :key="item.id"
+          text='whatever'
+          />
+        <!-- <li v-for="(item, index) in items" :key="index">{{ item }}</li> -->
       </ul>
     </p>
-n
-    <input v-model="newItem" />
 
-    <button @click="addItem()" :disabled="!newItem" > Add Item </button>
+    <input v-model="newText" />
+
+    <button @click="addItem()" :disabled="!newText" > Add Item </button>
 
     <button @click="deleteLast()" :disabled="deleteLastDisabled"> Delete Last Item</button>
   </div>
 </template>
 
 <script>
+import TodoItemThing from './TodoItemThing'
+
 export default {
   name: 'TodoThing',
+
+  components: { 
+    TodoItemThing
+  },
 
   props: {
     title: String
@@ -25,13 +36,14 @@ export default {
   
   data () {
     return {
+      idIndex: 4,
       items: [
-        "learn vue.js basics",
-        "show alden old-school video game",
-        "????????",
-        "PROFIT!!!"
+        { id: 0, text: "learn vue.js basics" },
+        { id: 1, text: "show alden old-school video game" },
+        { id: 2, text: "????????" },
+        { id: 3, text: "PROFIT!!!" },
       ],
-      newItem: ""   //"" good, String bad!! (( in prop section))
+      newText: "",
     }
   },
 
@@ -43,8 +55,11 @@ export default {
 
   methods: {
     addItem () {
-      this.items.push(this.newItem)
-      this.newItem = "" 
+      this.items.push({
+        id: this.idIndex++,
+        text: this.newText
+      })
+      this.newText = "" 
     },
 
     deleteLast () {
